@@ -1,0 +1,4 @@
+.vagrant/
+demo/temp/*
+bin/
+nohup.out
