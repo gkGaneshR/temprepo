@@ -7,18 +7,18 @@ language: go
 go:
   - 1.9.1
 install:
-  - make bootstrap
+  - maya/make bootstrap
 before_script:
-  - make golint-travis
+  - maya/make golint-travis
 script:
-  - make all
-  - ./buildscripts/test-cov.sh
+  - maya/make all
+  - maya/buildscripts/test-cov.sh
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
   email:
     recipients:
-    - kiran.mova@cloudbyte.com
+    - ganesh.kumar@cloudbyte.com
 deploy:
   provider: releases
   api_key:
